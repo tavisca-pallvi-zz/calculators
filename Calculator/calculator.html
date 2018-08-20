@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+   
+    <title></title>
+</head>
+<body>
+    <input type="text" value="expression" id="expression" />
+    <table>
+        
+        <tr >
+            <td><button onclick="calnumber(1)">1</button></td>
+            <td><button onclick="calnumber(2)">2</button></td>
+            <td><button onclick="calnumber(3)">3</button></td>
+            <td><button onclick="calnumber('+')">+</button></td>
+            <!--<td><button onclick="operatio(+)">+</button></td>-->
+        </tr>
+        <tr>
+            <td><button onclick="calnumber(4)">4</button></td>
+            <td><button  onclick="calnumber(5)">5</button></td>
+            <td><button  onclick="calnumber(6)">6</button></td>
+            <td><button onclick="calnumber('-')">-</button></td>
+            <!--<td><button  onclick="operation(-)">-</button></td>-->
+        </tr>
+        <tr>
+            <td><button  onclick="calnumber(7)">7</button></td>
+            <td><button  onclick="calnumber(8)">8</button></td>
+            <td><button  onclick="calnumber(9)">9</button></td>
+            <td><button onclick="calnumber('*')">*</button></td>
+            <!--<td><button  onclick="operation(*)">*</button></td>-->
+        </tr>
+        <tr>
+            <td><button  onclick="calnumber(0)">0</button></td>
+            <td><button  onclick="evaluates()">=</button></td>
+            <td><button  onclick="clear()">CLR</button></td>
+            <td><button  onclick="operation('/')">/</button></td>
+            <!--<td><button onclick="operation()">/</button></td>-->
+        </tr>
+
+    </table>
+    <script>
+
+        document.getElementById("expression").value = 0;
+         var firstno = '';
+    
+         function calnumber(no) {
+             console.log(no);
+             firstno += no;
+             document.getElementById("expression").value = firstno;
+          //   console.log(t);
+         }
+         function evaluates() {
+             var res = eval(firstno);
+             document.getElementById("expression").value = res;
+             console.log(res);
+         }
+         function clear() {
+             var res = eval(firstno);
+             res = "";
+             document.getElementById("expression").value = 0;
+         }
+        //function operation(ex) {
+        //    var res = '';
+        //    firstno = Number(firstno);
+
+        //    if (ex == '+') {
+        //        result += firstno;
+        //    }
+        //    else if (ex == '-') {
+        //            result -= firstno;
+        //    }
+        //    firstno = "";
+        //    console.log(res);
+        //    //console.log(ex);
+        ////    firstno = Num
+
+        //    //if (ex == '+') {
+
+
+        //    //}
+
+        //}
+
+        //function eval(ex) {
+        //    var res = '';
+        //    firstno = Number(firstno);
+
+        //    if (ex == '+') {
+        //        result += firstno;
+        //    }
+        //    else if (ex == '-') {
+        //        result -= firstno;
+        //    }
+        //    firstno = "";
+        //    console.log(res);
+        //    //console.log(ex);
+        //    //    firstno = Num
+
+        //    //if (ex == '+') {
+
+
+        //    //}
+
+        //}
+
+
+
+    </script>
+
+
+
+</body>
+</html>
