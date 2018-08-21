@@ -7,6 +7,8 @@
 </head>
 <body>
     <input type="text" value="expression" id="expression" onkeypress="calc(event)" />
+    <input type="text" value="history" id="history" onclick="history()" placeholder="history">
+
     <table>
 
         <tr>
@@ -40,20 +42,27 @@
 
     </table>
     <script>
-        document.getElementById("expression").value = 0;
+        document.getElementById("expression").value = "";
         var firstno = '';
-      
+        var hist= "";
         function calnumber(no) {
-           
             firstno += no;
-            document.getElementById("expression").value = firstno
-            }
+            document.getElementById("expression").value = firstno;
+        }
+
+        function history() {
+            debugger;
+            hist = document.getElementById("expression").value;
+            console.log(hist);
+            document.getElementById("history").value = hist;
+        }
+
 
 
         function evaluates() {
-            debugger;
+            //debugger;
             try {
-                var res = eval(document.getElementById("expression").value);
+                var res = firstno + " "  +"= " +eval(document.getElementById("expression").value);
                 console.log(res);
                 document.getElementById("expression").value = res;
                 res = '';
@@ -69,7 +78,7 @@
             document.getElementById("expression").value = 0;
         }
         function calc(e) {
-           debugger;
+           //debugger;
             if (e.keyCode == "13")
                 evaluates();
 

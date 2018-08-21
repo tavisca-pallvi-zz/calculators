@@ -23,9 +23,15 @@ tr {
     width: 300px;
     border: 1px solid black;
 }
+#history {
+    width: 500px;
+    height: 50px;
+    margin-left: 700px;
+    display: block;
+}
 input[type="text"] {
     font-size ="2em";
-    margin-left: 422px;
+    margin-left: 700px;
     width: 500px;
     height: 50px;
     text-align:right;
